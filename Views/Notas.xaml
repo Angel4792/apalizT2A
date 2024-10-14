@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="apalizT2A.Views.Notas"
+             Title="Notas">
+    <ScrollView>
+        <VerticalStackLayout
+        Padding="30"
+        Spacing="25">
+            <Label x:Name="lblUsuario"
+                   TextColor="White"
+                   HorizontalOptions="End"/>
+            <Label
+                Text="Sistema de notas UISRAEL"
+                TextColor="White"
+                FontSize="25"
+                HorizontalTextAlignment="Center"/>
+            <Image
+                Source="https://sts.uisrael.edu.ec/adfs/portal/logo/logo.png?id=6DD921B05C1AD53807A3E1D5B896AF3538861579AFC0E5D282263C63D50DC43A"
+                HeightRequest="100"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight"/>
+            <Label
+                Text="Seleccione estudiante: "/>
+            
+            <Picker x:Name="pkseleccion" Title="Estudiantes">
+            <Picker.Items>
+                <x:String>Angel Paliz</x:String>
+                <x:String>Armando Maldonado</x:String>
+                <x:String>Josue Salazar</x:String>
+                <x:String>Cristina Gavilanes</x:String>
+                <x:String>Mishell Urrutia</x:String>
+                <x:String>Paola Martinez</x:String>
+            </Picker.Items>
+            </Picker>
+
+            <Label Text="Nota 1"/>
+            <Entry x:Name="txtNota1"
+                   Placeholder="Ingrese la nota 1"/>
+
+            <Label Text="Examen 1"/>
+            <Entry x:Name="txtExamen1"
+                   Placeholder="Ingrese la nota del examen 1"/>
+
+            <Label x:Name="lblNota1"
+                   FontSize="Medium"/>
+
+            <Label Text="Segundo parcial"/>
+            <Label Text="Nota 2"/>
+            <Entry x:Name="txtNota2"
+                   Placeholder="Ingrese la nota 2"/>
+
+            <Label Text="Examen 2"/>
+            <Entry x:Name="txtExamen2"
+                   Placeholder="Ingrese nota examen 2"/>
+
+            <DatePicker  x:Name="datePicker" 
+                         
+                         TextColor="WhiteSmoke" 
+                         BackgroundColor="Black"/>
+
+
+            <Button x:Name="btbCalculo"
+                    Text="Calcular nota"
+                    Clicked="btbCalculo_Clicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
